@@ -1,0 +1,23 @@
+{
+  "name": "dombie",
+  "version": "0.0.0",
+  "description": "simple dom for xml/html",
+  "main": "dombie.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shtylman/node-dombie.git"
+  },
+  "keywords": [
+    "dom",
+    "html",
+    "xml"
+  ],
+  "author": "Roman Shtylman <shtylman@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "sax": "0.4.2"
+  }
+}
