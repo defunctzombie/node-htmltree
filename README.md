@@ -1,4 +1,4 @@
-# domebie
+# dombie ![Build Status](https://secure.travis-ci.org/shtylman/node-dombie.png?branch=master)](http://travis-ci.org/shtylman/node-dombie) #
 
 Sometimes you don't want anything fancy.
 
