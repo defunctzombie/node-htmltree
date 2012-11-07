@@ -19,5 +19,8 @@
   "license": "MIT",
   "dependencies": {
     "sax": "git://github.com/shtylman/sax-js.git#23bad4"
+  },
+  "devDependencies": {
+    "mocha": "1.6.0"
   }
 }
