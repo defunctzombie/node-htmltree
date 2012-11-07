@@ -4,7 +4,7 @@ function dombie(str, cb) {
 
     var strict = false;
     var parser = sax.parser(strict, {
-        lowercase: true,
+        lowercase: true
     });
 
     var current = {
