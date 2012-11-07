@@ -1,0 +1,13 @@
+[
+  {
+    "type": "tag",
+    "name": "script",
+    "attributes": {},
+    "children": [],
+    "data": "\n    <div>\n        <div>foo</div>\n    </div>\n"
+  },
+  {
+    "type": "text",
+    "data": "\n"
+  }
+]

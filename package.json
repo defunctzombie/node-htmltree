@@ -4,7 +4,7 @@
   "description": "simple dom for xml/html",
   "main": "dombie.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
