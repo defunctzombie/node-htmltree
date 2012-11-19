@@ -4,7 +4,8 @@
   "description": "simple dom for xml/html",
   "main": "dombie.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "test-generate": "TEST_GENERATE=1 npm test"
   },
   "repository": {
     "type": "git",
