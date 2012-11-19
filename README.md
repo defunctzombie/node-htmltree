@@ -1,6 +1,6 @@
 # dombie [![Build Status](https://secure.travis-ci.org/shtylman/node-dombie.png?branch=master)](https://travis-ci.org/shtylman/node-dombie) #
 
-Sometimes you don't want anything fancy.
+Very simple xml/html -> dom tree converter. Useful for further mangling your dom.
 
 ```javascript
 var dombie = require('dombie');
