@@ -1,5 +1,15 @@
 var sax = require('sax');
 
+//http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag
+//http://www.w3.org/html/wg/drafts/html/master/single-page.html#void-elements
+var void_elements = {};
+[
+    'area', 'base', 'br', 'col', 'command', 'embed', 'hr', 'img', 'input',
+    'keygen', 'link', 'meta', 'param', 'source', 'track', 'wbr'
+].forEach(function(tag) {
+    void_elements[tag] = true;
+});
+
 function htmltree(str, cb) {
 
     var strict = false;
@@ -43,25 +53,29 @@ function htmltree(str, cb) {
     };
 
     parser.onopentag = function (node) {
+
         var element = {
             type: 'tag',
             name: node.name,
             attributes: node.attributes,
             children: [],
+            void: void_elements[node.name]
         };
-
-        // push the current parent onto the node stack
-        stack.push(current);
 
         current.children.push(element);
 
-        // now our new tag is the current element
-        current = element;
+        // if element is a void tag we will not push it
+        if (!void_elements[element.name]) {
+            stack.push(current);
+            current = element;
+        }
     };
 
     parser.onclosetag = function(tag) {
-        // current tag is closed, get the parent back
-        current = stack.pop();
+        if (current.name === tag) {
+            // current tag is closed, get the parent back
+            current = stack.pop();
+        }
 
         if (!current) {
             return cb(new Error('mismatched closing tag: ' + tag));

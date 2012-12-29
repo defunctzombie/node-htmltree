@@ -46,7 +46,7 @@ function render(out, node) {
 
         // void elements must self terminate
         if (void_elements.indexOf(node.name) > 0) {
-            return out.write('/>');
+            return out.write('>');
         }
 
         out.write('>');
