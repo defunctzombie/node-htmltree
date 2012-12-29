@@ -1,6 +1,6 @@
 var sax = require('sax');
 
-function dombie(str, cb) {
+function htmltree(str, cb) {
 
     var strict = false;
     var parser = sax.parser(strict, {
@@ -78,5 +78,5 @@ function dombie(str, cb) {
     parser.write(str).close();
 }
 
-module.exports = dombie;
+module.exports = htmltree;
 

@@ -1,6 +1,6 @@
 var fs = require('fs');
 var assert = require('assert');
-var dombie = require('..');
+var htmltree = require('..');
 
 var fixtures = __dirname + '/fixtures';
 var reference = __dirname + '/reference';
@@ -68,7 +68,7 @@ fs.readdirSync(fixtures).forEach(function(filename) {
     test(filename, function(done) {
         var src = fs.readFileSync(path, 'utf8');
 
-        dombie(src, function(err, doc) {
+        htmltree(src, function(err, doc) {
             assert.ok(!err);
 
             var expected = src;

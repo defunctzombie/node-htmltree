@@ -1,14 +1,14 @@
 {
-  "name": "dombie",
+  "name": "htmltree",
   "version": "0.0.1",
-  "description": "simple dom for xml/html",
-  "main": "dombie.js",
+  "description": "simple tree data structure for html source",
+  "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/shtylman/node-dombie.git"
+    "url": "git://github.com/shtylman/node-htmltree.git"
   },
   "keywords": [
     "dom",

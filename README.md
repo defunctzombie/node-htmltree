@@ -1,11 +1,11 @@
-# dombie [![Build Status](https://secure.travis-ci.org/shtylman/node-dombie.png?branch=master)](https://travis-ci.org/shtylman/node-dombie) #
+# htmltree [![Build Status](https://secure.travis-ci.org/shtylman/node-htmltree.png?branch=master)](https://travis-ci.org/shtylman/node-htmltree) #
 
-Very simple xml/html -> dom tree converter. Useful for further mangling your dom.
+Very simple xml/html -> syntax tree converter. Useful for further mangling your html source.
 
 ```javascript
-var dombie = require('dombie');
+var htmltree = require('htmltree');
 
-dombie('<html><body onclick=foo></body></html>', function(err, doc) {
+htmltree('<html><body onclick=foo></body></html>', function(err, doc) {
     // doc
     {
         // stuff in the doctype tag
