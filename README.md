@@ -22,7 +22,8 @@ Each node entry is an object with the following form.
 // node
 [
     {
-        tag: 'html',
+        type: 'tag' | 'text' | 'comment',
+        name: 'html', // set for 'tag' nodes
         attributes: {
         },
         children: [
@@ -33,7 +34,9 @@ Each node entry is an object with the following form.
                 }
             },
             ...
-        ]
+        ],
+        // true if the tag node is a void element no body
+        void: boolean
     }
 ]
 ```
