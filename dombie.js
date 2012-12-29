@@ -7,6 +7,9 @@ function dombie(str, cb) {
         lowercase: true
     });
 
+    // document doctype if set
+    var doctype = undefined;
+
     var current = {
         children: []
     };
@@ -15,6 +18,10 @@ function dombie(str, cb) {
 
     parser.onerror = function (err) {
         cb(err);
+    };
+
+    parser.ondoctype = function(type) {
+        doctype = type;
     };
 
     parser.ontext = function (text) {
@@ -36,7 +43,6 @@ function dombie(str, cb) {
     };
 
     parser.onopentag = function (node) {
-
         var element = {
             type: 'tag',
             name: node.name,
@@ -58,12 +64,15 @@ function dombie(str, cb) {
         current = stack.pop();
 
         if (!current) {
-            return cb(new Error('hm: ' + tag));
+            return cb(new Error('mismatched closing tag: ' + tag));
         }
     };
 
     parser.onend = function () {
-        cb(null, current.children);
+        cb(null, {
+            doctype: doctype,
+            root: current.children
+        });
     };
 
     parser.write(str).close();
