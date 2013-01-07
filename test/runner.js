@@ -18,13 +18,6 @@ StringStream.prototype.toString = function() {
     return this._str;
 };
 
-//http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag
-//http://www.w3.org/html/wg/drafts/html/master/single-page.html#void-elements
-var void_elements = [
-    'area', 'base', 'br', 'col', 'command', 'embed', 'hr', 'img', 'input',
-    'keygen', 'link', 'meta', 'param', 'source', 'track', 'wbr'
-];
-
 function render(out, node) {
     if (node instanceof Array) {
         return node.forEach(render.bind(this, out));
@@ -45,7 +38,7 @@ function render(out, node) {
         });
 
         // void elements must self terminate
-        if (void_elements.indexOf(node.name) > 0) {
+        if (node.void) {
             return out.write('>');
         }
 
