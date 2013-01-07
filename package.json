@@ -18,7 +18,7 @@
   "author": "Roman Shtylman <shtylman@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "sax": "git://github.com/shtylman/sax-js.git#23bad4"
+    "sax": "0.5.0"
   },
   "devDependencies": {
     "mocha": "1.6.0"
