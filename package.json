@@ -18,9 +18,9 @@
   "author": "Roman Shtylman <shtylman@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "sax": "0.5.0"
+    "sax": "0.5.5"
   },
   "devDependencies": {
-    "mocha": "1.6.0"
+    "mocha": "1.14.0"
   }
 }
