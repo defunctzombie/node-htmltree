@@ -1,6 +1,6 @@
 {
   "name": "htmltree",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "simple tree data structure for html source",
   "main": "index.js",
   "scripts": {
