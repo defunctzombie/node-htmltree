@@ -1,4 +1,4 @@
-# htmltree [![Build Status](https://secure.travis-ci.org/shtylman/node-htmltree.png?branch=master)](https://travis-ci.org/shtylman/node-htmltree) #
+# htmltree [![Build Status](https://secure.travis-ci.org/defunctzombie/node-htmltree.png?branch=master)](https://travis-ci.org/defunctzombie/node-htmltree) #
 
 Very simple xml/html -> syntax tree converter. Useful for further mangling your html source.
 
