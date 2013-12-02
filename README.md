@@ -40,3 +40,7 @@ Each node entry is an object with the following form.
     }
 ]
 ```
+
+## license
+
+MIT
